@@ -1,0 +1,80 @@
+.c-btn-cta {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    background-color: $color-btn-bg-cta;
+    border-radius: $btn-radius;
+    border: 1px solid $color-btn-border-cta;
+    padding: $global-spacing-unit $global-spacing-unit;
+    color: transparentize($color-btn-text-cta, 0.2);
+    user-select: none;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
+
+    @include font-stack("heading");
+    @include font-size-proxy("l");
+    @include hover-focus {
+        color: transparentize($color-btn-text-cta, 0);
+        background-color: $color-btn-bg-hover-cta;
+    }
+
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        outline: none;
+    }
+
+    .o-page--subpage & {
+        padding: $global-spacing-unit-s;
+
+        @include font-size-proxy("base");
+    }
+}
+
+@media only screen and (min-width: 1289px) and (max-width: 1440px) {
+    .c-btn-cta {
+        padding: rem(20px);
+
+        @include font-size-proxy("l");
+    }
+}
+
+@media only screen and (min-width: 1099px) and (max-width: 1290px) {
+    .c-btn-cta {
+        padding: rem(20px);
+
+        @include font-size-proxy("l");
+    }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1100px) {
+    .c-btn-cta {
+        padding: rem(15px);
+
+        @include font-size-proxy("base");
+        @include font-weight("semi-bold");
+    }
+}
+
+@media only screen and (min-width: 499px) and (max-width: 900px) {
+    .c-btn-cta {
+        padding: rem(15px);
+
+        @include font-size-proxy("s");
+        @include font-weight("semi-bold");
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .c-btn-cta {
+        padding: rem(15px);
+
+        @include font-size-proxy("s");
+        @include font-weight("semi-bold");
+    }
+
+    .o-page--home .c-btn-cta {
+        padding: rem(10px) rem(15px) !important;
+    }
+}

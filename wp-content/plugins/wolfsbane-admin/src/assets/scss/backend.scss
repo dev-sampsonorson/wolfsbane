@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+@import url(https://p.typekit.net/p.css?s=1&k=nyl2egr&ht=tk&f=39512.39513.39518.39523&a=16100216&app=typekit&e=css);
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap);
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+/* Heading */
+.xs {
+    font-size: 10.24px;
+    font-size: 0.64rem;
+    line-height: 1.1999999999;
+}
+
+.s {
+    font-size: 12.8px;
+    font-size: 0.8rem;
+    line-height: 1.1999999999;
+}
+
+h6 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.1999999999;
+}
+
+h4 {
+    font-size: 25px;
+    font-size: 1.5625rem;
+    line-height: 1.1999999999;
+}
+
+h3 {
+    font-size: 31.25px;
+    font-size: 1.953125rem;
+    line-height: 1.1999999999;
+}
+
+h2 {
+    font-size: 39.06px;
+    font-size: 2.44125rem;
+    line-height: 1.1999999999;
+}
+
+h1 {
+    font-size: 48.83px;
+    font-size: 3.051875rem;
+    line-height: 1.1999999999;
+}
+
+.five-xl {
+    font-size: 61.03px;
+    font-size: 3.814375rem;
+    line-height: 1.1999999999;
+}
+
+.six-xl {
+    font-size: 76.29px;
+    font-size: 4.768125rem;
+    line-height: 1.1999999999;
+}
+
+.components-base-control__field input,
+.components-base-control__field textarea {
+    width: 100%;
+}
+
+/* Dashboard Layout */
+.wolfsbane-admin-wapper {
+    padding: 24px;
+
+    h1 {
+        margin-bottom: 48px;
+    }
+}
+
+.wolfsbane-admin-tab-content {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    h4 {
+        margin-top: 24px;
+        margin-bottom: 4px;
+    }
+
+    form {
+        margin-bottom: 48px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.wolfsbane-admin-tab-sub-heading {
+    margin-bottom: 0px;
+}
+
+.data-list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    &, & * {
+        box-sizing: border-box;
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        padding: .75rem 1.25rem;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        margin: 0px;
+
+        & + & {
+            border-top-width: 0;
+        }
+
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        color: #333;
+
+        // color: #212529;
+   
+    }
+
+    &__subtitle {
+        font-size: 14px;   
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 12px;
+    }
+
+    &__metadata {
+        font-size: 14px;
+    }
+}
+
+.icon-list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    &, & * {
+        box-sizing: border-box;
+    }
+
+    &__item {
+        margin: 0px;
+        padding-top: 12px;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 20px;
+        height: 32px;
+        outline: none;
+        text-decoration: none;
+        margin-right: 12px;
+        box-shadow: none;
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &--mp3 {
+            background-image: url("../images/icons8-mp3.png");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: left top;
+
+            // background-attachment: fixed;
+       
+        }
+
+        &--ogg {
+            background-image: url("../images/icons8-ogg.png");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.c-media-upload {
+    &, & * {
+        box-sizing: border-box;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        flex: 1 0 auto;
+        font-size: 14px;
+        line-height: 2em;
+        color: #212529;
+
+        /* font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left; */
+    }
+
+    &__controls {
+        position: relative;
+        overflow: hidden;
+        flex: 0 0 auto;
+
+        & > .form-control-file {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 2em;
+        text-decoration: none;
+        outline: none;
+        box-shadow: none !important;
+    }
+
+    &--attached &__file {
+        background-color: #d8d8d8;
+        border: 1px solid #d8d8d8;
+
+        // color: #fff;
+        font-weight: 700;
+    }
+
+    &--empty &__file {
+        background-color: transparent;
+    }
+
+    &__file {
+        padding: .5em;
+        border: .1em dashed #9A9B9C;
+        border-radius: 5px;
+        min-height: 50px;
+        height: auto !important;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__attachment {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    &__attachment-info {
+        flex: 1 1 auto;
+        max-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__file > &__message {
+        display: none;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font-size: 14px;
+        font-style: italic;
+        color: #222;
+        flex: 1 1 100%;
+    }
+
+    &--empty &__file > &__message {
+        display: block;
+    }
+
+    &--empty &__file > &__attachment {
+        display: none;
+    }
+
+    &--attached &__file > &__message {
+        display: none;
+    }
+
+    &--attached &__file > &__attachment {
+        display: flex;
+    }
+}
+
+.c-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__icon {
+        flex: 0 0 auto;
+    }
+
+    &__title {
+        flex: 0 0 auto;
+    }
+}
+
+.alert-message ul {
+    margin-bottom: 0px;
+}
+
+.wp-core-ui .wolfsbane-admin-wapper {
+    & select {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        padding: .375rem 1.75rem .375rem .75rem !important;
+        max-width: none !important;
+    }
+}

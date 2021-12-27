@@ -1,0 +1,17 @@
+.parsley-errors-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    .parsley-type {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: block;
+        height: rem(15px);
+        margin-bottom: $global-spacing-unit-s;
+        color: $color-error;
+
+        @include font-size-proxy("s");
+    }
+}

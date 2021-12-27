@@ -1,0 +1,176 @@
+///*----------------------------------*\
+//  #TYPOGRAPHY
+//\*----------------------------------*/
+
+// Mixins to help generating typographical rules.
+
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * neue-haas-unica:
+ *   - http://typekit.com/eulas/00000000000000003b9b2058
+ *   - http://typekit.com/eulas/00000000000000003b9b2059
+ *   - http://typekit.com/eulas/00000000000000003b9b205e
+ *   - http://typekit.com/eulas/00000000000000003b9b2063
+ *
+ * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-04-22 12:56:47 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=nyl2egr&ht=tk&f=39512.39513.39518.39523&a=16100216&app=typekit&e=css");
+
+@font-face {
+    font-family: "neue-haas-unica";
+    src: url("https://use.typekit.net/af/6a58f8/00000000000000003b9b2058/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/6a58f8/00000000000000003b9b2058/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/6a58f8/00000000000000003b9b2058/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "neue-haas-unica";
+    src: url("https://use.typekit.net/af/a77a8d/00000000000000003b9b2059/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"), url("https://use.typekit.net/af/a77a8d/00000000000000003b9b2059/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"), url("https://use.typekit.net/af/a77a8d/00000000000000003b9b2059/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "neue-haas-unica";
+    src: url("https://use.typekit.net/af/18efc2/00000000000000003b9b205e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/18efc2/00000000000000003b9b205e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/18efc2/00000000000000003b9b205e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "neue-haas-unica";
+    src: url("https://use.typekit.net/af/3da9bf/00000000000000003b9b2063/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3da9bf/00000000000000003b9b2063/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3da9bf/00000000000000003b9b2063/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tk-neue-haas-unica {
+    font-family: "neue-haas-unica",sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+
+// Shorthand onto specific font-stacks.
+@mixin font-stack($level) {
+    @if $level == "primary" or $level == "heading" {
+        font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica, sans-serif;
+    }
+    @else if $level == "secondary" {
+        font-family: 'Lora', 'Georgia', Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+    }
+    @else if $level == "tertiary" or $level == "copy" {
+        font-family: 'neue-haas-unica', 'Roboto', Arial, Helvetica, sans-serif;
+    }
+    @else {
+        @warn "#{$level} is not a valid font-family.";
+    }
+}
+
+// Generate a font-size and baseline-compatible line-height.
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    font-size: $font-size / $base-font-size * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height-px) * $base-line-height-px / $font-size;
+    }
+    @else {
+        @if type-of($line-height) == number or $line-height == inherit or $line-height == normal {
+            line-height: $line-height;
+        }
+        @else if $line-height != none and $line-height != false {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.";
+        }
+    }
+}
+
+@mixin font-size-reduction($font-size, $line-height: auto, $percentage: 0%) {
+    $font-size: $font-size * reduction-factor($percentage);
+
+    @include font-size($font-size, $line-height);
+}
+
+@mixin font-size-proxy($element: "base", $lh: $lh-tight) {
+    @if $element == "six-xl" {
+        @include font-size($fs-6xl, $lh);
+    }
+    @else if $element == "five-xl" {
+        @include font-size($fs-5xl, $lh);
+    }
+    @else if $element == "four-xl" {
+        @include font-size($fs-4xl, $lh);
+    }
+    @else if $element == "three-xl" {
+        @include font-size($fs-3xl, $lh);
+    }
+    @else if $element == "two-xl" {
+        @include font-size($fs-2xl, $lh);
+    }
+    @else if $element == "xl" {
+        @include font-size($fs-xl, $lh);
+    }
+    @else if $element == "l" {
+        @include font-size($fs-l, $lh);
+    }
+    @else if $element == "base" {
+        @include font-size($fs-base);
+    }
+    @else if $element == "s" {
+        @include font-size($fs-s, $lh);
+    }
+    @else if $element == "xs" {
+        @include font-size($fs-xs, $lh);
+    }
+}
+
+// Map keywords onto our numbered weights for convenience.
+@mixin font-weight($weight) {
+    @if $weight == "light" {
+        font-weight: $fw-light;
+    }
+    @else if $weight == "normal" {
+        font-weight: $fw-normal;
+    }
+    @else if $weight == "medium" {
+        font-weight: $fw-medium;
+    }
+    @else if $weight == "semi-bold" {
+        font-weight: $fw-semi-bold;
+    }
+    @else if $weight == "bold" {
+        font-weight: $fw-bold;
+    }
+    @else if $weight == "heavy" {
+        font-weight: $fw-heavy;
+    }
+    @else {
+        @warn "#{$weight} is not a valid font-weight.";
+    }
+}
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+@mixin truncate($width: 100%) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

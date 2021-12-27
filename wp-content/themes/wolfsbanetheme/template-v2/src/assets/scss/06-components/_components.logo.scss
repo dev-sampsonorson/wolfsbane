@@ -1,0 +1,52 @@
+.c-logo {
+    display: flex;
+    height: $logo-container-height;
+
+    &__fill {
+        fill: #fff;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    .svg &__instance {
+        display: none;
+        height: 50%;
+        max-width: 176px;
+        width: 100%;
+    }
+
+    /* .no-svg */
+
+    &__fallback {
+        display: block;
+        width: $logo-width;
+        background-image: url(../images/wolfsbane-logo.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        height: 100%;
+        background-size: contain;
+
+        // height: 50%;
+        // background-size: auto 100%;
+   
+    }
+}
+
+@media (max-width: 768px) {
+    .c-logo {
+        .svg &__instance {
+            height: 40%;
+        }
+
+        .no-svg &__fallback {
+            height: 40%;
+        }
+
+        &__fallback {
+            height: 70%;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "liveServer.settings.port": 5503,
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "D:\\WS\\Sandbox\\SSL\\certificate.pem",
+        "key": "D:\\WS\\Sandbox\\SSL\\key.pem",
+        "passphrase": ""
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "workbench.colorTheme": "Sapphire (Bright)",
+}

@@ -1,0 +1,76 @@
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Simple default styles for headings 1 through 6.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote,
+details,
+hr,
+fieldset,
+pre,
+table {
+    margin: 0 0 $global-spacing-unit 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-stack("heading");
+
+    // @include font-weight(bold);
+}
+
+@each $key, $value in $font-size-options {
+    @if map-has-key($font-size-headings, $key) {
+        $element: map-get($font-size-headings, $key);
+        $size: map-get($font-size-options, $key);
+
+        #{$element} {
+            // color: #{$key}
+            @include font-size-proxy($key);
+        }
+    }
+}
+
+/* @each $name, $width in $typography-breakpoints {
+    @media only screen and (max-width: $width) {
+        $breakpoint-headings: map-get($typography-breakpoints-reductions, $name);
+
+        @each $key, $value in $breakpoint-headings {
+            @if map-has-key($font-size-headings, $key) {
+                $element: map-get($font-size-headings, $key);
+                $size: map-get($font-size-options, $key);
+
+                # {$element} {
+                    @include font-size-reduction($size, $percentage: $value);
+                }
+            }
+        }
+    }
+} */
+
+p {
+    @include font-stack("copy");
+    @include font-weight("normal");
+
+    // @include font-size($font-size-p);
+    @include font-size-proxy("base");
+}

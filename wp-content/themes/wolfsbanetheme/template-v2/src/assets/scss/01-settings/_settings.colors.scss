@@ -1,0 +1,91 @@
+///*----------------------------------*\
+//  #COLORS
+//\*----------------------------------*/
+
+// Set up a colour palette which allows us to theme the entire project from one
+// location.
+
+$color-white: #fff;
+$color-blue: #141f39;
+$color-blueish: #0E1B3A;
+$color-light-blue: #2d3e6b;
+$color-purple: #7c36e5;
+$color-green: #2ecc9e;
+$color-red: #a20b0b;
+
+$color-grey: #666 !default;
+$color-grey-dark: #333 !default;
+$color-grey-light: #d8d8d8 !default;
+$color-grey-very-light: #f7f7f7 !default;
+
+$color-dark-copy: #1d1d1d;
+$color-mid-dark-copy: #626b78;
+
+// Colour palette.
+$color-brand-primary: $color-blueish;
+$color-brand-primary-highlight: lighten($color-brand-primary, 5%) !default;
+$color-brand-primary-shadow: darken($color-brand-primary, 5%) !default;
+
+$color-brand-secondary: $color-purple;
+$color-brand-secondary-highlight: lighten($color-brand-secondary, 5%) !default;
+$color-brand-secondary-shadow: darken($color-brand-secondary, 5%) !default;
+
+$color-brand-accent: $color-green;
+
+$color-page-text: $color-brand-primary;
+$color-page-background: $color-white;
+$color-page-title: $color-brand-primary;
+$color-page-copy: $color-mid-dark-copy;
+
+$color-page-text-alt: $color-white;
+$color-page-background-alt: $color-brand-primary;
+
+$color-logo: $color-white;
+
+$color-section-divider: $color-brand-secondary;
+$color-section-title: $color-brand-secondary;
+
+$color-links: inherit;
+$color-links-branded: $color-brand-primary;
+$color-links-attention: $color-brand-secondary;
+
+$color-links-nav-primary: $color-white;
+$color-links-nav-footer: $color-white;
+
+$color-links-nav-primary-hover: $color-brand-secondary;
+$color-links-nav-primary-active: $color-brand-secondary;
+
+$color-page-footer: #192648;
+$color-video-component: $color-page-footer;
+$color-video-component-alt: $color-grey-very-light;
+
+$color-btn-bg-cta: $color-brand-secondary;
+$color-btn-bg-hover-cta: darken($color-brand-secondary, 5%);
+$color-btn-text-cta: $color-white;
+$color-btn-border-cta: $color-brand-secondary;
+
+$color-annotation-pointer: $color-white;
+$color-annotation-bg: $color-white;
+$color-annotation-text: $color-brand-primary;
+
+$color-form-bg: $color-white;
+$color-control-bg: $color-white;
+$color-control: $color-brand-primary;
+$color-control-placeholder: $color-mid-dark-copy;
+$color-custom-control-indicator-bg: $color-white;
+$color-custom-control-checked-indicator-bg: $color-brand-secondary; //$color-mid-dark-copy;
+$color-custom-control-indicator-border-color: $color-grey-light;
+$color-error: $color-red;
+$color-success: $color-grey-light;
+$color-control-focus: $color-brand-secondary;
+
+$color-playlist-item-bg: $color-light-blue;
+$color-playlist-linenumber: $color-light-blue;
+$color-playlist-item-bg-alt: $color-grey-light;
+$color-playlist-linenumber-alt: $color-grey-light;
+$color-playlist-item-bg-hover-alt: $color-brand-primary; //$color-grey-dark;
+$color-playlist-item-text-alt: $color-brand-primary; //$color-grey-dark;
+$color-playlist-item-text-hover-alt: $color-grey-light;
+
+$color-hamburger-overlay: rgba($color-brand-primary, 0.96);
+$color-hamburger-overlay-secondary: rgba($color-brand-primary, 1);

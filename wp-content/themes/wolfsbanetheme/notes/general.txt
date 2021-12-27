@@ -1,0 +1,13 @@
+You will need to include the parsely javascript code after you include the jquery code. That will then extend the jquery object to have the parsely method.
+
+If you have imported both through npm then you will need import the parsleyjs module at the top of your main entry file for you javascript before bundling it. I would recommend using webpack for the bundling.
+
+import 'parsleyjs'
+Usually jQuery can be added to your project files globally through the webpack provide plugin.
+
+See: https://webpack.js.org/plugins/provide-plugin/
+
+new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery'
+})

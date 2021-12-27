@@ -1,0 +1,5 @@
+
+                        <div class="data-list__title">
+                            <?php echo $record->getTitle(); ?>
+                        </div>
+                        <div class="data-list__subtitle"><?php echo $record->getArtist(); ?></div>

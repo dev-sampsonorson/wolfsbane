@@ -1,0 +1,27 @@
+.c-contact-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $color-page-text-alt;
+
+    .o-page--subpage & {
+        color: $color-page-text;
+    }
+
+    &__message {
+        text-align: center;
+    }
+
+    &__btn {
+        flex: 0 1 auto;
+        outline: none;
+    }
+
+    &__link {
+        flex: 0 1 auto;
+        outline: none;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,24 @@
+.c-page-footer-copyright {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: $global-spacing-unit-s;
+
+    // @include font-size-proxy("s");
+
+    font-size: 12px;
+    color: transparentize($color-links-nav-footer, 0.2);
+
+    &__link {
+        cursor: pointer;
+        text-decoration: none;
+        outline: none;
+        color: transparentize($color-links-nav-footer, 0.2);
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+            color: transparentize($color-links-nav-primary, 0);
+        }
+    }
+}

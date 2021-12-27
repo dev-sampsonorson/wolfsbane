@@ -1,0 +1,123 @@
+.c-hero-annotation {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+
+    &__group {
+        margin: 0;
+        padding: 0;
+
+        /* position: relative;
+        width: 100%;
+        height: 100%;
+        list-style: none; */
+    }
+
+    &__item {
+        position: absolute;
+        list-style: none;
+
+        // align-items: center;
+   
+    }
+
+    &__item--equipment1 {
+        top: 8%;
+        left: 47%;
+    }
+
+    &__item--equipment2 {
+        top: 50%;
+        left: 57%;
+    }
+
+    &__item--equipment3 {
+        top: 10%;
+        left: 80%;
+    }
+
+    &__item--equipment4 {
+        top: 72%;
+        left: 73%;
+    }
+
+    &__wrapper {
+        position: relative;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__message {
+        // display: none;
+        visibility: hidden;
+        width: 250px;
+        max-width: 250px;
+        padding: $global-spacing-unit-s;
+        background-color: $color-annotation-bg;
+        color: $color-annotation-text;
+        border-radius: $border-radius;
+
+        @include font-size-proxy("s");
+
+        position: absolute;
+        z-index: 10;
+    }
+
+    &__message--top-left {
+        top: -82px;
+        left: -250px;
+    }
+
+    &__message--top-right {
+        top: -82px;
+        left: 20px;
+    }
+
+    &__message--bottom-left {
+        top: 32px;
+        left: -250px;
+    }
+
+    &__message--bottom-right {
+        top: 32px;
+        left: 20px;
+    }
+
+    &__pointer {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 6px;
+
+        // background: $color-annotation-pointer;
+        border-radius: 10px;
+        animation: growPointer .5s infinite;
+        animation-direction: alternate-reverse;
+        background-image: radial-gradient(circle closest-side, #fff 0%, #fff 70%, #dddac4 100%);
+
+        @include hover-focus {
+            animation: none;
+        }
+
+
+        &:hover + .c-hero-annotation__message,
+        &:focus + .c-hero-annotation__message,
+        &:focus-within + .c-hero-annotation__message {
+            // display: inline-block;
+            visibility: visible;
+        }
+    }
+}
+
+@keyframes growPointer {
+    from {
+        transform: scale(0.7);
+        opacity: .9;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

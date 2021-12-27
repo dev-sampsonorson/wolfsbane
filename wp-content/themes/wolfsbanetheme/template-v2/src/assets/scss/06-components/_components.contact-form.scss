@@ -1,0 +1,278 @@
+.c-contact-form {
+    border-radius: rem(8px);
+    box-shadow: 0 0px 28px rgba(0, 0, 0, 0.1), 0 0px 10px rgba(0, 0, 0, 0.1);
+    padding: $global-spacing-unit;
+    background-color: $color-form-bg;
+
+    &__instance {
+        border: 0;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        color: $color-mid-dark-copy;
+        padding-left: $global-spacing-unit;
+        padding-right: $global-spacing-unit;
+        padding-top: $global-spacing-unit;
+
+        // padding-bottom: $global-spacing-unit;
+
+        @include font-weight("normal");
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .c-contact-form__control--1-of-2,
+        .c-contact-form__control--2-of-2 {
+            flex: 0 1 calc(50% - #{$global-spacing-unit-s}); //rem(305.5px); //
+       
+        }
+
+        @media only screen and (max-width: 1020px) {
+            .c-contact-form__control--1-of-2,
+            .c-contact-form__control--2-of-2 {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        background-color: $color-btn-bg-cta;
+        border-radius: $btn-radius;
+        border: 1px solid $color-btn-border-cta;
+        padding: $global-spacing-unit-s;
+        margin-top: $global-spacing-unit;
+        color: transparentize($color-btn-text-cta, 0.2);
+        user-select: none;
+        transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
+        text-decoration: none;
+
+        @include font-stack("heading");
+        @include font-size-proxy("base");
+        @include hover-focus {
+            color: transparentize($color-btn-text-cta, 0);
+            background-color: $color-btn-bg-hover-cta;
+        }
+
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            outline: none;
+        }
+    }
+
+    &__control {
+        margin-bottom: $global-spacing-unit-s;
+
+        &--feedback .c-contact-form__feedback {
+            display: block;
+        }
+
+        &--error {
+            display: block;
+            color: $color-error;
+        }
+
+        &--error .c-contact-form__input {
+            &,
+            &:active,
+            &:focus,
+            &:focus-within {
+                border-color: $color-error;
+            }
+        }
+
+        &--success .c-contact-form__input {
+            border-color: $color-success;
+
+            
+            &:active,
+            &:focus,
+            &:focus-within {
+                border-color: $color-control-focus;
+            }
+        }
+
+        &--textfield {
+            .c-contact-form__input {
+                width: 100%;
+                margin-bottom: $global-spacing-unit-xs;
+            }
+        }
+
+        &--textarea {
+            .c-contact-form__input {
+                width: 100%;
+                min-height: 20ch;
+                max-height: 120ch;
+            }
+        }
+
+        &--checkbox {
+            position: relative;
+
+            // padding-left: $custom-control-gutter + $custom-control-indicator-size;
+
+            .c-contact-form__control-indicator {
+                width: $custom-control-indicator-size;
+                height: $custom-control-indicator-size;
+                background-color: $color-custom-control-indicator-bg;
+                border: $color-custom-control-indicator-border-color solid $custom-control-indicator-border-width;
+                border-radius: 3px;
+                margin-right: $custom-control-gutter;
+            }
+
+            .c-contact-form__input:checked ~ .c-contact-form__control-indicator {
+                color: #fff;
+                border-color: $color-custom-control-checked-indicator-bg;
+                background-color: $color-custom-control-checked-indicator-bg;
+
+                // background-image: url("data:image/svg;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPg0KICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik02LjQxIDBsLS42OS43Mi0yLjc4IDIuNzgtLjgxLS43OC0uNzItLjcyLTEuNDEgMS40MS43Mi43MiAxLjUgMS41LjY5LjcyLjcyLS43MiAzLjUtMy41LjcyLS43Mi0xLjQ0LTEuNDF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDEpIiAvPg0KPC9zdmc+");
+                background-image: url(../images/check.svg);
+                background-size: 80%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .c-contact-form__label {
+                @include font-weight("normal");
+                @include text-selection-none;
+
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                margin-bottom: 0;
+                vertical-align: top;
+            }
+
+            .c-contact-form__input {
+                @include visually-hidden;
+            }
+        }
+    }
+
+    &__group {
+        margin-bottom: $global-spacing-unit;
+    }
+
+    &__input {
+        display: inline-block;
+        background-color: $color-control-bg;
+        color: $color-control;
+        text-decoration: none;
+        letter-spacing: normal;
+        box-shadow: none;
+        border-radius: 3px;
+        border: 1px solid $color-grey-light;
+        padding-left: $global-spacing-unit-s;
+        padding-right: $global-spacing-unit-s;
+        padding-top: $global-spacing-unit-s;
+        padding-bottom: $global-spacing-unit-s;
+        outline: none;
+
+        @include font-size-proxy("base");
+
+        &::placeholder {
+            @include font-size-proxy("base");
+
+            color: transparentize($color-control-placeholder, 0.6);
+        }
+
+        &--full-width {
+            width: 100% !important;
+        }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            border: 1px solid $color-control-focus;
+        }
+    }
+
+    &__feedback {
+        @include font-size-proxy("s");
+
+        // display: none;
+        display: block;
+        height: rem(15px);
+        margin-bottom: $global-spacing-unit-s;
+        color: $color-control-placeholder;
+    }
+
+    &__label,
+    &__group-label {
+        display: inline-block;
+        margin-top: $global-spacing-unit-xs;
+        margin-bottom: $global-spacing-unit-xs;
+        color: $color-control-placeholder;
+
+        @include font-stack("copy");
+        @include font-weight("bold");
+        @include font-size-proxy("base");
+
+        &__label {
+            @include font-weight("normal");
+        }
+    }
+
+    &__group-label + &__feedback,
+    &__group &__error-list {
+        margin-top: -$global-spacing-unit-xs;
+    }
+
+    &__error-list {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        list-style: none;
+        color: $color-control-placeholder;
+        margin-bottom: $global-spacing-unit-s;
+
+        @include font-size-proxy("s");
+
+        /* .parsley-required {
+            height: rem(15px);
+            margin-bottom: $global-spacing-unit-s;
+            color: $color-control-placeholder;
+
+            @include font-size-proxy("s");
+        } */
+    }
+
+    &__error {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: block;
+        height: rem(15px);
+        margin-bottom: $global-spacing-unit-s;
+        color: $color-error;
+
+        @include font-size-proxy("s");
+    }
+
+    &__outcome {
+        display: none;
+        padding: $global-spacing-unit-l;
+        text-align: center;
+
+        &--success {
+            display: block;
+        }
+
+        &-heading {
+            margin-bottom: $global-spacing-unit-xs;
+        }
+    }
+}

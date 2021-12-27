@@ -1,0 +1,19 @@
+.c-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: $global-spacing-unit-xl;
+
+    &__item {
+        flex: 1 0 33.33%;
+        min-width: 335px;
+        max-width: 427px;
+        padding: $global-spacing-unit-s;
+    }
+}
+
+@media only screen and (max-width: 687px) {
+    .c-team {
+        justify-content: center;
+    }
+}

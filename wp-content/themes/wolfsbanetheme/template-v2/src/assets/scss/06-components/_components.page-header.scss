@@ -1,0 +1,15 @@
+.c-page-header {
+    display: flex;
+    justify-content: space-between;
+    padding: $global-spacing-unit-s $global-spacing-unit;
+    height: $header-height;
+    color: $color-page-text-alt;
+
+    &__logo {
+        flex: 0 0 auto;
+    }
+
+    &__nav {
+        flex: 0 0 auto;
+    }
+}

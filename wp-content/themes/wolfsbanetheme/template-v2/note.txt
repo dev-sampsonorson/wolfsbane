@@ -1,0 +1,276 @@
+
+ID: wolfsbane-official-website
+AIzaSyD0rKcNm3iUBIV4XS4OUSqFBxSmVtmicrc
+
+
+
+
+
+{
+                    test: /\.ts$/,
+                    use: [
+                        {
+                            loader: 'file-loader?name=modules/[name].js'
+                        },
+                        {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env'],
+                                plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-object-rest-spread']
+                            }
+                        },
+                        {
+                            loader: 'ts-loader'
+                        }
+                    ],
+                    exclude: /node_modules/,
+                    include: [
+                        path.join(__dirname, './src/assets/modules/nav-primary.ts')
+                    ]
+                },
+
+
+
+
+
+                    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.3.3/system.min.js"></script> -->
+    <!-- <script type="module" src="modules/nav-primary.js"></script> -->
+    <!-- <script type="text/javascript">
+        //index.js is the transpiled index.ts
+        SystemJS.import('js/index.bundle.js');
+    </script> -->
+
+
+
+
+
+
+
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, atque optio. Nobis commodi ut eos?
+                Assumenda
+                adipisci atque labore ratione, maiores nulla minima excepturi voluptatem magni nemo id officiis
+                temporibus?</p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 /* let pointPos = this.getOffset(samplePoint);
+            let leftDistance = pointPos.left;
+            let rightDistance = this.viewPortWidth - (pointPos.left + this.pointWidth);
+            let topDistance = pointPos.top;
+            let bottomDistance = this.viewPortHeight - (pointPos.top + this.pointHeight); */
+
+            // top-left
+            // if msgHeight < topDistance && msgWidth < leftDistance
+
+            // bottom-left
+            // if msgHeight < bottomDistance && msgWidth < leftDistance
+
+            // top-right
+            // if msgHeight < topDistance && msgWidth < rightDistance
+
+            // bottom-right
+            // if msgHeight < bottomDistance && msgWidth < rightDistance
+
+
+
+            /* console.log('this.viewPortHeight', this.viewPortHeight);
+            console.log('leftDistance', leftDistance);
+            console.log('rightDistance', rightDistance);
+            console.log('topDistance', topDistance);
+            console.log('bottomDistance', bottomDistance); */
+
+
+
+
+
+
+    private injectVideoFrame() {
+        let containerEl = this.targetEl.querySelector(`:scope .${this.config.videoFrameContainerElClass}`);
+
+        this.iFrameEl = document.createElement('iframe');
+
+        this.iFrameEl.setAttribute('id', this.config.videoFramePlaceHolderTargetId);
+        this.iFrameEl.setAttribute('title', 'Wolfsbane YouTube Videos');
+        this.iFrameEl.setAttribute('frameborder', '0');
+        this.iFrameEl.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+        this.iFrameEl.setAttribute('allowfullscreen', '');
+
+        this.iFrameEl.classList.add(this.config.videoFrameElClass);
+
+        containerEl?.insertAdjacentElement("beforeend", this.iFrameEl);
+    }

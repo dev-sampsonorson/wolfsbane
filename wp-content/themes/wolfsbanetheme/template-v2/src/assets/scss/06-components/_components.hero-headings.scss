@@ -1,0 +1,364 @@
+/*------------------------------------*\
+  #HEADLINE
+\*------------------------------------*/
+.c-hero-headline {
+    @include font-stack("heading");
+    @include clearfix;
+
+    &__title {
+        @include font-weight("heavy");
+
+        color: $color-page-text-alt;
+        margin-bottom: $global-spacing-unit-xs;
+
+        &--line-break {
+            display: block;
+        }
+    }
+
+    &__body {
+        padding-bottom: $global-spacing-unit-l;
+    }
+
+    &__subtitle {
+        color: $color-page-text-alt;
+
+        @include font-stack("heading");
+        @include font-size-proxy("xl");
+        @include font-weight("medium");
+        @include remove-margin("bottom");
+    }
+
+    &--subpage &__pagetitle {
+        color: $color-brand-secondary;
+        text-align: right;
+    }
+
+    &--subpage &__title {
+        @include font-size-proxy("three-xl");
+
+        line-height: rem(42px);
+        color: $color-brand-primary;
+        text-align: right;
+
+        // line-height: rem(51px);
+        margin-bottom: $global-spacing-unit-s;
+    }
+
+    &--subpage &__body {
+        padding-bottom: $global-spacing-unit;
+
+        @include clearfix;
+    }
+
+    &--subpage &__subtitle {
+        float: right;
+        max-width: 600px;
+        text-align: right;
+        color: $color-brand-primary;
+
+        @include font-size-proxy("l");
+        @include font-weight("normal");
+    }
+
+    &--subpage &__cta {
+        float: right;
+        text-decoration: none;
+    }
+
+    // hey
+    &__pagetitle--align-left {
+        text-align: left !important;
+    }
+
+    &__title--align-left {
+        text-align: left !important;
+    }
+
+    &__subtitle--align-left {
+        float: none !important;
+        text-align: left !important;
+    }
+
+    &__cta--align-left {
+        float: none !important;
+    }
+}
+
+@media only screen and (min-width: 1599px) and (max-width: 1920px) {
+    .c-hero-headline {
+        &__title {
+            @include font-size-proxy("four-xl");
+        }
+
+        &__subtitle {
+            @include font-size-proxy("xl");
+        }
+
+        &--subpage &__pagetitle {
+            //
+       
+        }
+
+        &--subpage &__title {
+            //
+       
+        }
+
+        &--subpage &__subtitle {
+            //
+       
+        }
+    }
+}
+
+@media only screen and (min-width: 1439px) and (max-width: 1600px) {
+    .c-hero-headline {
+        &__title {
+            @include font-size-proxy("four-xl");
+        }
+
+        &__subtitle {
+            @include font-size-proxy("xl");
+        }
+    }
+}
+
+@media only screen and (min-width: 1289px) and (max-width: 1440px) {
+    .c-hero-headline {
+        &__title {
+            @include font-size-proxy("four-xl");
+        }
+
+        &__subtitle {
+            @include font-size-proxy("xl");
+        }
+
+        &--subpage &__pagetitle {
+            //
+       
+        }
+
+        &--subpage &__title {
+            //
+       
+        }
+
+        &--subpage &__subtitle {
+            @include font-size-proxy("l");
+        }
+    }
+}
+
+@media only screen and (min-width: 1099px) and (max-width: 1290px) {
+    .c-hero-headline {
+        &__title {
+            @include font-size-proxy("four-xl");
+        }
+
+        &__subtitle {
+            @include font-size-proxy("xl");
+        }
+
+        &--subpage &__title {
+            @include font-size-proxy("three-xl");
+
+            line-height: rem(42px);
+        }
+
+        &--subpage &__subtitle {
+            /* @include font-size-proxy("base");
+
+            line-height: rem(20px); */
+        }
+    }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1100px) {
+    .c-hero-headline {
+        &__title {
+            @include font-size-proxy("three-xl");
+        }
+
+        &__body {
+            padding-bottom: $global-spacing-unit;
+        }
+
+        &__subtitle {
+            @include font-size-proxy("l");
+        }
+
+        &--subpage &__title {
+            @include font-size-proxy("two-xl");
+
+            line-height: rem(37px);
+        }
+
+        &--subpage &__subtitle {
+            @include font-size-proxy("base");
+
+            line-height: rem(20px);
+        }
+    }
+}
+
+@media only screen and (min-width: 729px) and (max-width: 900px) {
+    .c-hero-headline {
+        &__title {
+            text-align: center;
+
+            @include font-size-proxy("three-xl");
+        }
+
+        &__body {
+            text-align: center;
+            padding-bottom: $global-spacing-unit;
+        }
+
+        &__subtitle {
+            @include font-size-proxy("l");
+        }
+
+        &__cta {
+            align-self: center;
+        }
+
+        &--subpage &__pagetitle {
+            @include font-weight("normal");
+
+            text-align: left;
+        }
+
+        &--subpage &__title {
+            @include font-size-proxy("two-xl");
+
+            line-height: rem(37px);
+            text-align: left;
+        }
+
+        &--subpage &__subtitle {
+            @include font-size-proxy("base");
+
+            float: none;
+
+            // margin-left: auto;
+            // margin-right: auto;
+            line-height: rem(20px);
+            text-align: left;
+        }
+
+        &--subpage &__cta {
+            float: none;
+            display: block;
+
+            // margin-left: auto;
+            // margin-right: auto;
+       
+        }
+    }
+}
+
+@media only screen and (min-width: 499px) and (max-width: 730px) {
+    .c-hero-headline {
+        &__title {
+            text-align: center;
+
+            @include font-size-proxy("two-xl");
+        }
+
+        &__body {
+            text-align: center;
+            padding-bottom: $global-spacing-unit-s;
+        }
+
+        &__subtitle {
+            @include font-size-proxy("base");
+        }
+
+        &__cta {
+            align-self: center;
+        }
+
+        &--subpage &__pagetitle {
+            @include font-weight("normal");
+
+            text-align: left;
+        }
+
+        &--subpage &__title {
+            @include font-size-proxy("xl");
+
+            line-height: rem(30px);
+            text-align: left;
+        }
+
+        &--subpage &__subtitle {
+            @include font-size-proxy("base");
+
+            float: none;
+            line-height: rem(20px);
+            text-align: left;
+        }
+
+        &--subpage &__cta {
+            float: none;
+            display: block;
+
+            // margin-left: auto;
+            // margin-right: auto;
+       
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .c-hero-headline {
+        &__title {
+            text-align: center;
+
+            @include font-size-proxy("xl");
+        }
+
+        &__body {
+            text-align: center;
+            padding-bottom: $global-spacing-unit-s;
+        }
+
+        &__subtitle {
+            @include font-size-proxy("base");
+        }
+
+        &__cta {
+            align-self: center;
+        }
+
+        &--subpage &__pagetitle {
+            @include font-weight("normal");
+
+            text-align: left;
+        }
+
+        &--subpage &__title {
+            @include font-size-proxy("xl");
+
+            line-height: rem(30px);
+            text-align: left;
+        }
+
+        &--subpage &__subtitle {
+            @include font-size-proxy("base");
+
+            line-height: rem(20px);
+            text-align: left;
+        }
+
+        &--subpage &__cta {
+            float: none;
+            display: inline-block;
+
+            // margin-left: auto;
+            // margin-right: auto;
+       
+        }
+    }
+}

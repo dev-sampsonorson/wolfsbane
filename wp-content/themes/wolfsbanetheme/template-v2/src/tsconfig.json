@@ -1,0 +1,13 @@
+{
+    "extends": "../tsconfig.base",
+    "compilerOptions": {
+        "typeRoots": [
+            "node_modules/@types",
+            "./src/assets/typings"
+        ],
+        "types": ["node", "youtube", "jquery"],
+    },
+    "include": [
+        "./**/*"
+    ]
+}

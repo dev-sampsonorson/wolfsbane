@@ -1,0 +1,120 @@
+///*----------------------------------*\
+//  #GLOBAL
+//\*----------------------------------*/
+
+// Project-level settings and setup.
+
+// Base typographical styles and baseline grid.
+$base-font-size: 16px !default;
+$base-line-height: 1.4 !default;
+$base-line-height-px: $base-font-size * $base-line-height !default;
+
+$lh-base: $base-line-height;
+$lh-medium: $base-line-height * 0.9;
+$lh-tight: $base-line-height * 0.8571428571;
+
+$grid-columns: 12;
+$grid-columns-header: 12;
+$grid-columns-content: 12;
+$grid-columns-footer: 12;
+$grid-gutter: 24px / $base-font-size * 1rem;
+$grid-gutter-half: $grid-gutter / 2;
+$grid-column-padding: $grid-gutter-half / $base-font-size * 1rem; /* 12px */
+$grid-columns-min-height: $grid-gutter * 4;
+
+$grid-row-columns: 6 !default;
+
+$header-height: 70px / $base-font-size * 1rem; /* 70px */
+$logo-width: 175.115px / $base-font-size * 1rem;
+$logo-height: 23px / $base-font-size * 1rem;
+$logo-container-height: $header-height - $grid-gutter;
+
+$site-width: 1280px / $base-font-size * 1rem; /* 1304px */
+$site-content-width: 1280px / $base-font-size * 1rem;
+$max-content-width: 670px / $base-font-size * 1rem;
+
+$hero-image-height: 100vh;
+
+// $footer-height: 401px;
+$footer-height: 384px; //374
+
+$bp-xl: $site-width;
+$bp-lg: 992px / $base-font-size * 1rem;
+$bp-md: 768px / $base-font-size * 1rem;
+$bp-sm: 576px / $base-font-size * 1rem;
+$bp-xs: 0;
+
+$grid-breakpoints: (xs: 0, sm: $bp-sm, md: $bp-md, lg: $bp-lg, xl: $site-width) !default;
+$container-max-widths: (sm: 100%, md: 100%, lg: 100%, xl: $site-width) !default;
+
+$edge-size: 1px / $base-font-size * 1rem;
+$footer-edge-size: 3px / $base-font-size * 1rem;
+
+$border-radius: 3px / $base-font-size * 1rem;
+$btn-radius: 3px / $base-font-size * 1rem;
+
+$social-icon-width: 48px / $base-font-size * 1rem;
+$social-icon-height: 48px / $base-font-size * 1rem;
+
+$team-photo-width: 241px / $base-font-size * 1rem;
+$team-photo-height: 230px / $base-font-size * 1rem;
+
+/* Typography */
+$fs-6xl: 76.29px !default; // h++
+$fs-5xl: 61.03px !default; // h+
+$fs-4xl: 48.83px !default; // h1
+$fs-3xl: 39.06px !default; // h2
+$fs-2xl: 31.25px !default; // h3
+$fs-xl: 25px !default; // h4
+$fs-l: 20px !default; // h5
+$fs-base: $base-font-size;
+$fs-s: 12.8px !default;
+$fs-xs: 10.24px !default;
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-heavy: 800;
+
+// $max-read-col-width: 600px;
+$max-read-col-width: 600px / $base-font-size * 1rem;
+
+$section-divider-width: 24px / $base-font-size * 1rem;
+$section-divider-height: 6px / $base-font-size * 1rem;
+
+$hamburger-width: 35px / $base-font-size * 1rem;
+$hamburger-height: 30px / $base-font-size * 1rem;
+$hamburger-speed: 0.75s;
+
+$video-screen-width: 544px / $base-font-size * 1rem;
+$video-screen-height: 306px / $base-font-size * 1rem;
+
+$subpage-hero-width: 1920px;
+$subpage-hero-heightt: 700px;
+
+$custom-control-indicator-size: 24px / $base-font-size * 1rem;
+$custom-control-gutter: $grid-gutter / 4;
+$custom-control-indicator-border-width: 1px;
+$custom-control-indicator-bg-size: 50% 50%;
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            //
+//                               W A R N I N G                                //
+//                                                                            //
+////////////////////////////////////////////////////////////////////////////////
+
+// Private/framework-only reassignment. Do not alter anything below.
+$global-spacing-unit: $grid-gutter;
+$global-spacing-unit-xs: $grid-gutter / 4;
+$global-spacing-unit-s: $grid-gutter / 2;
+$global-spacing-unit-l: $grid-gutter * 2;
+$global-spacing-unit-xl: $grid-gutter * 4;
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+$nav-primary-active-indicator-height: 20px / $base-font-size * 1rem;
+$nav-primary-open-indicator-height: 5px / $base-font-size * 1rem;

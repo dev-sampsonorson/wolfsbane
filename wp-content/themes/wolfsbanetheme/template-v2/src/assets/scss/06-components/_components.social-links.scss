@@ -1,0 +1,107 @@
+.c-social-links {
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &--alt {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        & .c-social-links__item {
+            flex: 0 0 auto !important;
+        }
+
+        & .c-social-links__link {
+            width: $social-icon-width / 1.4;
+        }
+
+        @at-root .svg & .c-social-links__instance {
+            fill: transparentize($color-mid-dark-copy, 0.2);
+
+            &:hover,
+            &:focus,
+            &:focus-within {
+                fill: transparentize($color-mid-dark-copy, 0);
+            }
+        }
+    }
+
+    &__item {
+        flex: 0 0 $social-icon-width;
+        margin-right: $global-spacing-unit;
+    }
+
+    &__item:last-child {
+        margin-right: 0px;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: $social-icon-width * 2;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &__instance {
+        width: 48px;
+        height: 48px;
+    }
+
+    .svg &__instance {
+        display: block;
+        height: $social-icon-height;
+        border-radius: 3px;
+        color: transparentize($color-links-nav-footer, 0.2);
+        fill: currentColor;
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+            fill: transparentize($color-links-nav-footer, 0);
+        }
+    }
+
+    .no-svg &__instance {
+        display: none;
+    }
+
+    .no-svg &__fallback {
+        display: inline-block;
+        width: $social-icon-width;
+        height: $social-icon-height;
+        border-radius: 3px;
+        opacity: 0.8;
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+            opacity: 1;
+        }
+    }
+
+    .no-svg &__fallback--facebook {
+        background-image: url(../images/facebook.png);
+    }
+
+    .no-svg &__fallback--twitter {
+        background-image: url(../images/twitter.png);
+    }
+
+    .no-svg &__fallback--instagram {
+        background-image: url(../images/instagram.png);
+    }
+
+    .no-svg &__fallback--youtube {
+        background-image: url(../images/youtube.png);
+    }
+
+    .no-svg &__fallback--tiktok {
+        background-image: url(../images/tiktok.png);
+    }
+}

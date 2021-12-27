@@ -1,0 +1,44 @@
+.c-service {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: $global-spacing-unit-xl;
+
+    &__item {
+        flex: 1 0 33.33%;
+        padding: $global-spacing-unit-s;
+    }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1100px) {}
+
+@media only screen and (min-width: 729px) and (max-width: 900px) {
+    .c-service {
+        &__item {
+            flex: 1 0 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 730px) {
+    .c-service {
+        // padding-left: 10%;
+        // padding-right: 10%;
+        padding-left: $global-spacing-unit-s;
+        padding-right: $global-spacing-unit-s;
+
+        &__item {
+            flex: 1 0 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .c-service {
+        padding-left: $global-spacing-unit-s;
+        padding-right: $global-spacing-unit-s;
+
+        &__item {
+            flex: 1 0 100%;
+        }
+    }
+}

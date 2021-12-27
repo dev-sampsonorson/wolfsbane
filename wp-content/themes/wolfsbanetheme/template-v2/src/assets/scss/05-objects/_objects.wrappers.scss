@@ -1,0 +1,14 @@
+.o-page {
+    color: $color-page-text;
+    background-color: $color-page-background;
+
+    &[data-nav-primary-active-menu-id=home],
+    &.home {
+        background-color: $color-page-background-alt;
+    }
+
+    /* &--subpage {
+        color: $color-page-text;
+        background-color: $color-page-background;
+    } */
+}

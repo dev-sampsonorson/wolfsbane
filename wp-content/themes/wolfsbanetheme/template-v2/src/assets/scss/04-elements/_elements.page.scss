@@ -1,0 +1,21 @@
+:root {
+    font-size: $base-font-size;
+}
+
+html {
+    @include font-stack("copy");
+    @include font-weight(normal);
+
+    // width: 100%;
+    height: 100%;
+    line-height: $lh-base;
+    color: $color-page-text-alt;
+    // background-color: $color-page-background-alt;
+}
+
+body {
+    height: 100%;
+    text-rendering: optimizeLegibility;
+
+    // margin: 0 0 100px; /* bottom = footer height */
+}

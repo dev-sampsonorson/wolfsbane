@@ -1,0 +1,60 @@
+// Register the script
+wp_register_script( 'some_handle', 'path/to/myscript.js' );
+ 
+// Localize the script with new data
+$translation_array = array(
+    'some_string' => __( 'Some string to translate', 'plugin-domain' ),
+    'a_value' => '10'
+);
+wp_localize_script( 'some_handle', 'object_name', $translation_array );
+ 
+// Enqueued script with localized data.
+wp_enqueue_script( 'some_handle' );
+You can access the variables in JavaScript as follows:
+
+// alerts 'Some string to translate'
+alert( object_name.some_string );
+Note: The data in the resulting JavaScript call will be passed as text (see ticket #25280). If you are trying to pass integers you will need to call the JavaScript parseInt() function.
+
+// Call a function that needs an int.
+FinalZoom = map.getBoundsZoomLevel( bounds ) - parseInt( object_name.a_value, 10 ); 
+
+
+
+
+-----------------------------------------------
+
+
+
+function theme_enqueue_scripts() {
+    /**
+     * frontend ajax requests.
+     */
+    wp_enqueue_script( 'frontend-ajax', JS_DIR_URI . 'frontend-ajax.js', array('jquery'), null, true );
+    wp_localize_script( 'frontend-ajax', 'frontend_ajax_object',
+        array( 
+            'ajaxurl' => admin_url( 'admin-ajax.php' ),
+            'data_var_1' => 'value 1',
+            'data_var_2' => 'value 2',
+        )
+    );
+}
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+
+
+
+in our js file we can use any of the globally declared variable frontend_ajax_object.ajaxurl, frontend_ajax_object.data_var_1, frontend_ajax_object.data_var_1.
+
+
+jQuery(document).ready(function($) {
+    $.ajax({
+        url: frontend_ajax_object.ajaxurl,
+        type: 'get',
+        data: {
+            'action':'states_city_filter'
+        },
+        success: function( response ) {
+            console.log(response);
+        },
+    });
+});

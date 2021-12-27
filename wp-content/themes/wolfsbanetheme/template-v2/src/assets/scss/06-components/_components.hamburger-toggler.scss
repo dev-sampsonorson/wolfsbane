@@ -1,0 +1,59 @@
+.c-hamburger-toggler {
+    width: $hamburger-width;
+    height: $hamburger-height;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 301;
+
+    /* transition: all 0.4s ease;
+
+    &--clicked:hover {
+        transform: rotate(225deg);
+    } */
+
+    &__line {
+        width: 100%;
+        height: 4px;
+        background-color: transparentize($color-links-nav-primary, 0.2);
+        transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    &:hover > &__line,
+    &:focus > &__line,
+    &:focus-within > &__line {
+        background-color: transparentize($color-links-nav-primary, 0);
+    }
+
+    &--clicked &__line-one {
+        transform: rotateZ(-405deg) translate(-8px, 6px);
+    }
+
+    &--clicked &__line-two {
+        opacity: 0;
+    }
+
+    &--clicked &__line-three {
+        transform: rotateZ(405deg) translate(-8px, -6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .c-hamburger-toggler {
+        width: $hamburger-width * 0.7;
+        height: $hamburger-height * 0.7;
+
+        &__line {
+            height: 2px;
+        }
+
+        &--clicked &__line-one {
+            transform: rotateZ(-405deg) translate(-7px, 3px);
+        }
+
+        &--clicked &__line-three {
+            transform: rotateZ(405deg) translate(-7px, -3px);
+        }
+    }
+}

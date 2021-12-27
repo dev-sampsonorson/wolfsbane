@@ -1,0 +1,27 @@
+/*----------------------------------*\
+//  #CONFIG
+/*----------------------------------*/
+
+// Config-level settings (environment switches, debugging modes, etc.).
+
+$config: (env: dev, healthcheck: false, debug: false);
+
+@function config($key) {
+    @return map-get($config, $key);
+}
+
+$enable-grid-classes: false;
+
+$font-size-options: (xs: 10.24px, s: 12.8px, base: 16px, l: 20px, xl: 25px, two-xl: 31.25px, three-xl: 39.06px, four-xl: 48.83px, five-xl: 61.03px, six-xl: 76.29px) !default;
+$font-size-headings: (xs: ".xs", s: ".s", base: "h6", l: "h5", xl: "h4", two-xl: "h3", three-xl: "h2", four-xl: "h1", five-xl: ".five-xl", six-xl: ".six-xl") !default;
+
+$typography-breakpoints: (bp1: 1190px, bp2: 1000px, bp3: 960px, bp4: 900px, bp5: 750px, bp6: 670px, bp7: 540px, bp8: 450px, bp9: 350px);
+$breakpoint-reduction-percentages: (bp1: 15%, bp2: 20%, bp3: 27%, bp4: 32%, bp5: 40%, bp6: 50%, bp7: 55%, bp8: 65%, bp9: 70%);
+
+/* $typography-breakpoints-reductions: (
+    bp1: (xs: 17.7%, s: 17.7%, base: 17.7%, l: 17.7%, xl: 15%, two-xl: 17.7%, three-xl: 17.7%, four-xl: 15%, five-xl: 17.7%, six-xl: 17.7%), 
+    bp2: (xs: 17.7%, s: 17.7%, base: 17.7%, l: 17.7%, xl: 15%, two-xl: 17.7%, three-xl: 17.7%, four-xl: 20%, five-xl: 17.7%, six-xl: 17.7%), 
+    bp3: (xs: 17.7%, s: 17.7%, base: 17.7%, l: 17.7%, xl: 15%, two-xl: 17.7%, three-xl: 17.7%, four-xl: 27%, five-xl: 17.7%, six-xl: 17.7%), 
+    bp4: (xs: 17.7%, s: 17.7%, base: 17.7%, l: 17.7%, xl: 15%, two-xl: 17.7%, three-xl: 17.7%, four-xl: 32%, five-xl: 17.7%, six-xl: 17.7%), 
+    bp5: (xs: 17.7%, s: 17.7%, base: 17.7%, l: 17.7%, xl: 15%, two-xl: 17.7%, three-xl: 17.7%, four-xl: 40%, five-xl: 17.7%, six-xl: 17.7%)
+); */

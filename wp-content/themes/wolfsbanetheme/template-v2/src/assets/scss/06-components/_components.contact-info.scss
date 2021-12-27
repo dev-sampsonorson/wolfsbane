@@ -1,0 +1,53 @@
+.c-contact-info {
+    padding-top: $global-spacing-unit-xl;
+    padding-left: $global-spacing-unit-l;
+    padding-right: $global-spacing-unit-l;
+
+    &__title {
+        color: $color-brand-primary;
+    }
+
+    &__address {
+        color: $color-mid-dark-copy;
+
+        @include font-stack("heading");
+
+        & > span {
+            display: block;
+        }
+    }
+
+    &__email {
+        display: block;
+        outline: none;
+        text-decoration: none;
+        color: $color-mid-dark-copy;
+
+        @include font-stack("heading");
+    }
+
+    &__tel {
+        display: block;
+        outline: none;
+        text-decoration: none;
+        color: $color-mid-dark-copy;
+
+        @include font-stack("heading");
+    }
+
+    &__social {
+        //
+   
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .c-contact-info {
+        text-align: center;
+
+        &__social {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.c-content-section-header {
+    // padding-bottom: $global-spacing-unit;
+
+    &__divider {
+        width: $section-divider-width;
+        height: $section-divider-height;
+        background-color: $color-section-divider;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        color: $color-section-title;
+        text-align: center;
+        padding-top: $global-spacing-unit-s;
+
+        @include font-size-proxy("l");
+        @include font-weight("medium");
+    }
+}

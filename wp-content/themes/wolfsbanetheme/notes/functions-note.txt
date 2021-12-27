@@ -1,0 +1,111 @@
+function liveReload(){
+echo '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] +\':35729/livereload.js?snipver=1"></\' + \'script>\')</script>';
+}
+add_action( 'wp_footer', 'liveReload',100 );
+
+
+
+/* function wpza_after_body_tag_code() {
+     echo 'test wp_body_open';
+}
+add_action( 'wp_body_open', 'wpza_after_body_tag_code' );
+
+
+function wolfsbane_scripts() {
+    // common styles
+
+    // common scripts
+
+
+    wp_enqueue_style('wolfsbane_home_style', get_stylesheet_uri());
+    wp_enqueue_string('wolfsbane_home_script', get_stylesheet_uri());
+}
+add_action('wp_enqueue_scripts', 'wolfsbane_scripts');
+
+
+
+function wpb_adding_scripts() {
+wp_register_script('my-amazing-script', get_template_directory_uri() . '/js/my-amazing-script.js','','1.1', true);
+wp_enqueue_script( 'myscript', get_template_directory_uri() . '/js/scripts.js', array(), false, true );
+wp_enqueue_script('my-amazing-script');
+}
+add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
+
+
+
+function my_scripts() {
+    // Page ID, title, slug, or array of such.
+    // e.g. is_page('My page title') - page title
+    // e.g. is_page(2) - page id 
+    // e.g. is_page('my-page-title') - page slug
+    // e.g. is_page( array( 'page1', 'page1')) - in this example an array of page slugs.
+    // Check out the references for more on this function.
+    if( is_page( array( 'about-us', 'contact', 'management' ) ){
+        wp_enqueue_script( 'script-name', 'path/to/example.js', array(), '1.0.0', true );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+function wolfsbane_scripts() {
+    wp_enqueue_script( 'polyfill-js', get_template_directory_uri() . '/js/polyfill.min.js', array(), false, true);
+    wp_enqueue_script( 'runtime-js', get_template_directory_uri() . '/js/runtime.bundle.js', array('polyfill-js'), false, true);
+    wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/js/vendor.bundle.js', array('polyfill-js', 'runtime-js'), false, true);
+    wp_enqueue_script( 'modernizer-js', get_template_directory_uri() . '/js/modernizr-custom.js', array('modernizer-js', 'polyfill-js', 'runtime-js'), false, true);
+
+
+    if(is_page(array('home'))){
+        wp_enqueue_script( 'home-page-bundle', get_template_directory_uri() . '/js/home-page.bundle.js', array('polyfill-js', 'runtime-js', 'vendor-js', 'modernizer-js'), '1.0.0', true);
+    } elseif(is_page(array('studio'))){
+        wp_enqueue_script( 'studio-page-bundle', get_template_directory_uri() . '/js/shared-script.bundle.js', array('polyfill-js', 'runtime-js', 'vendor-js', 'modernizer-js'), '1.0.0', true);
+    } elseif(is_page(array('music'))){
+        wp_enqueue_script( 'music-page-bundle', get_template_directory_uri() . '/js/music-script.bundle.js', array('polyfill-js', 'runtime-js', 'vendor-js', 'modernizer-js'), '1.0.0', true);
+    } elseif(is_page(array('about'))){
+        wp_enqueue_script( 'about-page-bundle', get_template_directory_uri() . '/js/shared-script.bundle.js', array('polyfill-js', 'runtime-js', 'vendor-js', 'modernizer-js'), '1.0.0', true);
+    } elseif(is_page(array('contact'))){
+        wp_enqueue_script( 'contact-page-bundle', get_template_directory_uri() . '/js/contact-script.bundle.js', array('polyfill-js', 'runtime-js', 'vendor-js', 'modernizer-js'), '1.0.0', true);
+    }
+}
+// add_action( 'wp_enqueue_scripts', 'wolfsbane_scripts' );
+
+
+// Add specific CSS class by filter.
+add_filter('body_class', function($classes) {
+    if (is_page('home')) {
+        $classes[] = 'o-page--home home';
+    } elseif (is_page('studio')) {
+        $classes[] = 'o-page--studio studio';
+    } elseif (is_page('music')) {
+        $classes[] = 'o-page--music music';
+    } elseif (is_page('about')) {
+        $classes[] = 'o-page--about about';
+    } elseif (is_page('contact')) {
+        $classes[] = 'o-page--contact contact';
+    }
+    
+    return array_merge($classes, array('o-page'));
+});
+
+
+
+
+
+
+    /* register_nav_menu('header-nav', 'Header Menu');
+    register_nav_menu('hamburger-nav-instance', 'Hamburger Menu');
+    register_nav_menu('footer-services-nav', 'Footer Services Menu');
+    register_nav_menu('footer-sitemap-one-nav', 'Footer Sitemap One Menu');
+    register_nav_menu('footer-sitemap-two-nav', 'Footer Sitemap Two Menu'); */

@@ -1,0 +1,28 @@
+.c-contact-content-layout {
+    display: flex;
+    justify-content: center;
+    padding-top: $global-spacing-unit-xl;
+    padding-bottom: $global-spacing-unit-xl;
+
+    // padding-right: $global-spacing-unit-xl;
+
+    &__info {
+        flex: 0 0 auto;
+    }
+
+    &__form {
+        flex: 0 1 rem(683px);
+        padding-right: $global-spacing-unit;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .c-contact-content-layout {
+        flex-direction: column;
+        align-items: center;
+
+        &__form {
+            padding-left: $global-spacing-unit;
+        }
+    }
+}

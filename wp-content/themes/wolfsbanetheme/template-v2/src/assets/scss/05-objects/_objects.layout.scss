@@ -1,0 +1,229 @@
+.o-page-layout {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: $footer-height;
+
+    @include min-height(100vh);
+    @include clearfix;
+
+    %page-layout-child-dimen {
+        padding-left: calc((100% - #{$site-width}) / 2);
+        padding-right: calc((100% - #{$site-width}) / 2);
+    }
+
+    &__header {
+        @extend %page-layout-child-dimen;
+
+        background-color: $color-page-background-alt;
+        border-bottom: 1px solid $color-brand-secondary;
+    }
+
+    &__hero-image-subpage {
+        // @extend %page-layout-child-dimen;
+   
+    }
+
+    &__content {
+        position: relative;
+        min-height: 428px;
+        background-repeat: repeat-x;
+        background-position: top left;
+        overflow: visible;
+
+        @extend %page-layout-child-dimen;
+    }
+
+    .o-page--subpage &__content {
+        // margin-top: -150px;
+        margin-top: -125px;
+
+        // background-color: $color-page-background;
+        background-image: url(../images/wolfsbane-subpage-equalizer.png);
+        z-index: 2;
+    }
+
+    .o-page--home &__content {
+        margin-top: -35px;
+        background-image: url(../images/wolfsbane-equalizer.png);
+    }
+
+    &__value-proposition {
+        min-height: 300px;
+        padding-bottom: $global-spacing-unit-xl;
+    }
+
+    &__content-divider {
+        padding-bottom: $global-spacing-unit-xl;
+    }
+
+    &__works {
+        padding-bottom: $global-spacing-unit-xl;
+    }
+
+    &__video {
+        padding-bottom: $global-spacing-unit-xl;
+    }
+
+    &__content-section {
+        padding-bottom: $global-spacing-unit-xl;
+        padding-left: $global-spacing-unit;
+        padding-right: $global-spacing-unit;
+
+        &--push-down-xs {
+            padding-bottom: $global-spacing-unit-xs;
+        }
+
+        &--push-down-s {
+            padding-bottom: $global-spacing-unit-s;
+        }
+
+        &--push-down {
+            padding-bottom: $global-spacing-unit;
+        }
+
+        &--push-down-l {
+            padding-bottom: $global-spacing-unit-l;
+        }
+
+        &--push-down-xl {
+            padding-bottom: $global-spacing-unit-xl;
+        }
+
+        &--push-left-xl {
+            padding-left: $global-spacing-unit-xl;
+        }
+
+        &--push-right-xl {
+            padding-right: $global-spacing-unit-xl;
+        }
+
+        @media only screen and (min-width: 901px) and (max-width: 1100px) {
+            &--push-left-xl {
+                padding-left: $global-spacing-unit-l;
+                padding-right: $global-spacing-unit-l;
+            }
+
+            &--push-right-xl {
+                padding-right: $global-spacing-unit-l;
+                padding-left: $global-spacing-unit-l;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            &--push-left-xl {
+                padding-left: $global-spacing-unit-l;
+                padding-right: $global-spacing-unit-l;
+            }
+
+            &--push-right-xl {
+                padding-right: $global-spacing-unit-l;
+                padding-left: $global-spacing-unit-l;
+            }
+        }
+
+        /* @media only screen and (max-width: 630px) {
+            padding-bottom: $global-spacing-unit;
+        } */
+    }
+
+    &__contact-cta {
+        // position: absolute;
+
+        // @extend %page-layout-child-dimen;
+        // padding-top: $global-spacing-unit-xl;
+        padding-bottom: $global-spacing-unit-xl;
+        z-index: 30;
+    }
+
+    &__footer {
+        // @extend %page-layout-child-dimen;
+        display: block;
+        background-color: $color-page-footer;
+        margin-top: -$footer-height;
+        height: $footer-height;
+
+        &-social {
+            @extend %page-layout-child-dimen;
+
+            flex-basis: 100%;
+            border-bottom: $footer-edge-size solid $color-page-background-alt;
+        }
+
+        &-nav {
+            @extend %page-layout-child-dimen;
+
+            flex-basis: 100%;
+        }
+
+        &-copyright {
+            @extend %page-layout-child-dimen;
+
+            flex-basis: 100%;
+            border-top: $footer-edge-size solid $color-page-background-alt;
+        }
+    }
+}
+
+.c-page-footer {
+    /* justify-content: space-between;
+    padding: $global-spacing-unit-s 0;
+    height: $header-height;
+    color: $color-page-text-alt; */
+}
+
+/* Remove */
+/* .o-page-wrapper__column, [class^="o-page-layout__"], [class="o-container__col"], [class="col"], [class*="col"] {
+background-color: pink;
+   border: $color-brand-primary 2px solid;
+   border-radius: 8px;
+
+    padding-top: $global-spacing-unit-s;
+    padding-bottom: $global-spacing-unit-s;
+} */
+
+@media only screen and (max-width: 1100px) {
+    .o-page-layout {
+        padding-bottom: 781.33px;
+
+        /* &__content {
+            min-height: 428px;
+        } */
+
+        &__footer {
+            margin-top: -781.33px;
+            height: 781.33px;
+        }
+    }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1100px) {
+    .o-page-layout {
+        .o-page--subpage &__content {
+            margin-top: -175px;
+        }
+    }
+}
+
+@media only screen and (min-width: 729px) and (max-width: 900px) {
+    .o-page-layout {
+        .o-page--subpage &__content {
+            margin-top: -185px;
+        }
+    }
+}
+
+@media only screen and (min-width: 499px) and (max-width: 730px) {
+    .o-page-layout {
+        .o-page--subpage &__content {
+            margin-top: -205px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .o-page-layout {
+        .o-page--subpage &__content {
+            margin-top: -205px;
+        }
+    }
+}

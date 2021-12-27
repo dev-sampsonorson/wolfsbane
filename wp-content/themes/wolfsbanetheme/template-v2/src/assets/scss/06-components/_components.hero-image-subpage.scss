@@ -1,0 +1,117 @@
+.c-hero-image-subpage {
+    padding-left: calc((100% - #{$site-width}) / 2);
+    padding-right: calc((100% - #{$site-width}) / 2);
+    padding-bottom: 55px;
+    height: 515px;
+
+    // @include min-height(455px);
+
+    &__content {
+        position: relative;
+        height: 100%;
+        padding-left: $global-spacing-unit;
+        padding-right: $global-spacing-unit;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+    .about &__content {
+        background-image: url(../images/about-hero.png);
+        background-position: -10vw 20px;
+    }
+
+    .studio & {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center 0px;
+        background-image: url(../images/studio-hero.png);
+    }
+
+    .music & {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center 0px;
+        background-image: url(../images/music-hero.png);
+    }
+
+    .contact & {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center 0px;
+        background-image: url(../images/contact-hero.png);
+    }
+
+    .talent-hunt & {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center 0px;
+        background-image: url(../images/talent-hunt-hero.png);
+    }
+
+    &__headline {
+        // padding-top: 3vw;
+        padding-top: 5%;
+        z-index: 3;
+    }
+}
+
+@media only screen and (min-width: 1099px) and (max-width: 1290px) {
+    .c-hero-image-subpage {
+        &__content {
+            background-position: -20vw 20px;
+        }
+
+        &__headline {
+            padding-top: 5%;
+        }
+    }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 1100px) {
+    .c-hero-image-subpage {
+        &__content {
+            background-position: -20vw 20px;
+        }
+
+        &__headline {
+            padding-top: 5%;
+        }
+    }
+}
+
+@media only screen and (min-width: 729px) and (max-width: 900px) {
+    .c-hero-image-subpage {
+        &__content {
+            background-position: -30vw 20px;
+        }
+
+        &__headline {
+            padding-top: 5%;
+        }
+    }
+}
+
+@media only screen and (min-width: 499px) and (max-width: 730px) {
+    .c-hero-image-subpage {
+        &__content {
+            background-position: -50vw 20px;
+        }
+
+        &__headline {
+            padding-top: 5%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .c-hero-image-subpage {
+        &__content {
+            background-position: -50vw 20px;
+        }
+
+        &__headline {
+            padding-top: 5%;
+        }
+    }
+}
