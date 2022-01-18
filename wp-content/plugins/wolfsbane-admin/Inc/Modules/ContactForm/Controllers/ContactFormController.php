@@ -196,8 +196,8 @@ class ContactFormController extends BaseController
             $mail->SMTPAuth   = true;
             $mail->SMTPSecure = "tls"; //PHPMailer::ENCRYPTION_STARTTLS;  
             $mail->Port       = 587;   
-            $mail->Username   = 'info@wolfsbane.global';
-            $mail->Password   = 'InfoEmail@.1';
+            $mail->Username   = '';
+            $mail->Password   = '';
             $mail->SMTPDebug  = -1;                  
         
             //Recipients
